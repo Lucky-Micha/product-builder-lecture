@@ -1,5 +1,5 @@
 :root {
-    --bg-image: url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=1920&auto=format&fit=crop');
+    --bg-image: url('https://images.unsplash.com/photo-1618044733300-9472154094ee?auto=format&fit=crop&q=80&w=2071');
     --container-bg: rgba(255, 255, 255, 0.9);
     --text-color: #333;
     --h2-color: #444;
@@ -10,7 +10,7 @@
 }
 
 body.dark-mode {
-    --bg-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=1920&auto=format&fit=crop');
+    --bg-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1618044733300-9472154094ee?auto=format&fit=crop&q=80&w=2071');
     --container-bg: rgba(30, 30, 30, 0.9);
     --text-color: #f0f0f0;
     --h2-color: #e0e0e0;
