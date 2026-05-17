@@ -11,15 +11,18 @@
     <div class="container">
         <button id="theme-toggle" class="theme-toggle" title="다크/라이트 모드 전환">🌓</button>
         <h1>경기도 특별한 카페 추천</h1>
-        <p class="subtitle">프랜차이즈는 가라! 특별한 공간을 추천해 드립니다.</p>
+        <p class="subtitle">당신의 취향에 맞는 특별한 공간을 추천해 드립니다.</p>
         
         <div class="category-selection">
             <button class="category-btn" data-category="view">🏞️ 풍경이 좋은 카페</button>
             <button class="category-btn" data-category="architecture">🏛️ 건축물이 멋진 카페</button>
-            <button class="category-btn" data-category="coffee">☕ 커피가 맛있는 카페</button>
+            <button class="category-btn" data-category="reading">📚 책 읽기 좋은 카페</button>
         </div>
 
         <div id="recommendation-result" class="recommendation-result">
+            <div id="cafe-image-container" class="cafe-image-container">
+                <img id="cafe-image" src="" alt="카페 이미지">
+            </div>
             <div id="cafe-info" class="cafe-info">
                 <h3 id="cafe-name">카테고리를 선택해 주세요</h3>
                 <p id="cafe-desc"></p>
