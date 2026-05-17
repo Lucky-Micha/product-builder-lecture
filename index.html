@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator only for SH</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>경기도 특별한 카페 추천</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">🌓</button>
-        <h1>Lotto Number Generator only for SH</h1>
-        <div class="lotto-machine">
-            <div id="numbers" class="numbers"></div>
-            <button id="generate" class="button">Generate Numbers</button>
+        <button id="theme-toggle" class="theme-toggle" title="다크/라이트 모드 전환">🌓</button>
+        <h1>경기도 특별한 카페 추천</h1>
+        <p class="subtitle">프랜차이즈는 가라! 특별한 공간을 추천해 드립니다.</p>
+        
+        <div class="category-selection">
+            <button class="category-btn" data-category="view">🏞️ 풍경이 좋은 카페</button>
+            <button class="category-btn" data-category="architecture">🏛️ 건축물이 멋진 카페</button>
+            <button class="category-btn" data-category="coffee">☕ 커피가 맛있는 카페</button>
         </div>
+
+        <div id="recommendation-result" class="recommendation-result">
+            <div id="cafe-info" class="cafe-info">
+                <h3 id="cafe-name">카테고리를 선택해 주세요</h3>
+                <p id="cafe-desc"></p>
+                <p id="cafe-location" class="location"></p>
+            </div>
+            <button id="generate" class="button">다른 카페 추천받기</button>
+        </div>
+
         <div class="history">
-            <h2>History</h2>
+            <h2>최근 확인한 카페</h2>
             <ul id="history-list"></ul>
         </div>
     </div>

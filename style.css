@@ -7,6 +7,7 @@
     --history-item-text: #555;
     --border-color: #eee;
     --shadow-color: rgba(0, 0, 0, 0.1);
+    --accent-color: #ff758c;
 }
 
 body.dark-mode {
@@ -18,10 +19,11 @@ body.dark-mode {
     --history-item-text: #ccc;
     --border-color: #444;
     --shadow-color: rgba(0, 0, 0, 0.5);
+    --accent-color: #ff7eb3;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
     background: var(--bg-image);
     background-size: cover;
     background-position: center;
@@ -43,7 +45,7 @@ body {
     box-shadow: 0 10px 25px var(--shadow-color), 0 5px 10px rgba(0, 0, 0, 0.05);
     text-align: center;
     width: 90%;
-    max-width: 500px;
+    max-width: 550px;
     backdrop-filter: blur(10px);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -73,44 +75,92 @@ body.dark-mode .theme-toggle:hover {
 h1 {
     color: var(--text-color);
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     transition: color 0.3s ease;
 }
 
-.lotto-machine {
+.subtitle {
+    color: var(--h2-color);
     margin-bottom: 30px;
+    font-size: 0.95rem;
 }
 
-.numbers {
+.category-selection {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
     margin-bottom: 30px;
-    min-height: 60px;
 }
 
-.number {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
+.category-btn {
+    background: var(--history-item-bg);
+    border: 2px solid transparent;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
     font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.category-btn:hover {
+    background: var(--border-color);
+    transform: translateX(5px);
+}
+
+.category-btn.active {
+    border-color: var(--accent-color);
+    background: var(--container-bg);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.recommendation-result {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cafe-info {
+    margin-bottom: 20px;
+}
+
+.cafe-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.cafe-info p {
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.location {
+    font-size: 0.85rem;
+    color: var(--h2-color);
+    font-style: italic;
 }
 
 .button {
     background: linear-gradient(135deg, #ff758c, #ff7eb3);
     color: white;
-    padding: 15px 30px;
+    padding: 12px 25px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
     transition: all 0.3s ease;
@@ -147,10 +197,19 @@ h2 {
     padding: 10px 15px;
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 0.9rem;
     color: var(--history-item-text);
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.history-tag {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--accent-color);
+    color: white;
 }
