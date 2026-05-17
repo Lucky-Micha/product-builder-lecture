@@ -1,6 +1,7 @@
 const numbersDiv = document.getElementById('numbers');
 const generateBtn = document.getElementById('generate');
 const historyList = document.getElementById('history-list');
+const themeToggle = document.getElementById('theme-toggle');
 
 const colors = [
     '#ff758c', '#ff7eb3', '#ff8a7a', '#ff9e7a', '#ffa27a', '#ffac7a',
@@ -13,6 +14,19 @@ const colors = [
     '#8cf720', '#68f720', '#44f720'
 ];
 
+// Theme Logic
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+// Lotto Logic
 generateBtn.addEventListener('click', () => {
     const numbers = generateNumbers();
     displayNumbers(numbers);
